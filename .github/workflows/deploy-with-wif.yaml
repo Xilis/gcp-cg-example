@@ -20,9 +20,9 @@ jobs:
         with:
           token_format: access_token # can also get id-token to use for authorization
           # Which provider to use for SA impersonation (projects/<gcp-project-number>/locations/global/workloadIdentityPools/<my-pool-name>/providers/<my-provider>)
-          workload_identity_provider: projects/388639942010/locations/global/workloadIdentityPools/github-actions-test/providers/gha-test
+          workload_identity_provider: projects/388639942010/locations/global/workloadIdentityPools/github-actions-saso/providers/github-provider-saso
           # Which SA to impersonate (aka login as)
-          service_account: github-actions@gcp-competence-group.iam.gserviceaccount.com
+          service_account: gh-sa-saso@gcp-competence-group.iam.gserviceaccount.com
 
       # Install gcloud, `setup-gcloud` automatically picks up authentication from `auth`.
       - name: Set up Cloud SDK
